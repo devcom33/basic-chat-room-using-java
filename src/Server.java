@@ -59,7 +59,7 @@ public class Server implements Runnable{
                 broadcast(nickname+" joined the chat");
                 String message;
                 while((message = in.readLine()) != null){
-                    if(message.startsWith("/nick ")){
+                    if(message.startsWith("/rename ")){
                         String[] messageSplit = message.split(" ",2);
                         if(messageSplit.length==2){
                             out.println(nickname+" changed his name to "+messageSplit[1]);
